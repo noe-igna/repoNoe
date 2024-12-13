@@ -1,0 +1,3 @@
+CREATE TABLE EndangeredSpecies ( SpeciesID INT PRIMARY KEY AUTO_INCREMENT, CommonName VARCHAR(100), ScientificName VARCHAR(150), ConservationStatus VARCHAR(50), HabitatType VARCHAR(100), PopulationEstimate INT );
+
+Noe Ignacio Mnaueles Guerrero
