@@ -7,13 +7,13 @@ class EndangeredSpeciesModel {
     }
 
     public function getAll() {
-        $query = "SELECT * FROM EndangeredSpecies";
+        $query = "SELECT * FROM endangeredspecies";
         $stmt = $this->db->query($query);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function getById($id) {
-        $query = "SELECT * FROM EndangeredSpecies WHERE SpeciesID = :id";
+        $query = "SELECT * FROM endangeredspecies WHERE SpeciesID = :id";
         $stmt = $this->db->prepare($query);
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
@@ -21,7 +21,7 @@ class EndangeredSpeciesModel {
     }
 
     public function insert($data) {
-        $query = "INSERT INTO EndangeredSpecies (CommonName, ScientificName, ConservationStatus, HabitatType, PopulationEstimate) 
+        $query = "INSERT INTO endangeredspecies (CommonName, ScientificName, ConservationStatus, HabitatType, PopulationEstimate) 
                   VALUES (:CommonName, :ScientificName, :ConservationStatus, :HabitatType, :PopulationEstimate)";
         $stmt = $this->db->prepare($query);
         $stmt->execute($data);
@@ -29,7 +29,7 @@ class EndangeredSpeciesModel {
     }
 
     public function update($id, $data) {
-        $query = "UPDATE EndangeredSpecies SET 
+        $query = "UPDATE endangeredspecies SET 
                     CommonName = :CommonName, 
                     ScientificName = :ScientificName, 
                     ConservationStatus = :ConservationStatus, 
@@ -42,7 +42,7 @@ class EndangeredSpeciesModel {
     }
 
     public function delete($id) {
-        $query = "DELETE FROM EndangeredSpecies WHERE SpeciesID = :id";
+        $query = "DELETE FROM endangeredspecies WHERE SpeciesID = :id";
         $stmt = $this->db->prepare($query);
         $stmt->bindValue(':id', $id, PDO::PARAM_INT);
         return $stmt->execute();

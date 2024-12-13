@@ -1,6 +1,6 @@
 <?php
-require_once '../src/db_coneccion.php';
-require_once '../src/EndangeredSpeciesModel.php';
+require_once '../repoNoe/src/db_coneccion.php';
+require_once '../repoNoe/src/EndangeredSpeciesModel.php';
 
 class EndangeredSpeciesFormController {
     private $model;

@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'RepoNoeI';
+$dbname = 'reponoei';
 $user = 'root';
 $password = '1234';
 
